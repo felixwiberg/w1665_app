@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <center>
+        <div class=caption>Station: <%= StationId %></div><br>
+    </center>
+
+
+    <div class="grid_recipe">
+        <div class="recipe">
+            <form id='form'>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rullhjul_beteckning</div>
+                    <div class="form"><input type="text" name="Rullhjul_beteckning" value="<%=Rullhjul_beteckning%>" />
+                    </div>
+                    <div class="sql_hit" id="rullhjul"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Radie_RH18</div>
+                    <div class="form"><input type="text" name="Radie_RH18" value="<%=Radie_RH18%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+                <div class="grid_recipe">
+                    <div class="form_name">VinkelSistaRulle_RH07</div>
+                    <div class="form"><input type="text" name="VinkelSistaRulle_RH07"
+                            value="<%=VinkelSistaRulle_RH07%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+                <div class="grid_recipe">
+                    <div class="form_name">Rullhjul_StationId</div>
+                    <div class="form"><input type="text" name="Rullhjul_StationId" value="<%=Rullhjul_StationId%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+            </form>
+        </div>
+
+        <div class=side>
+            <center>
+                <button type="button" id="test_rullhjul" name="test_rullhjul"
+                    style="background-color: #05af51; display: none;">
+                    Testa rullhjul
+                </button>
+                <div class="div_overwrite" id="div_overwrite">
+                    <button type="button" id="change_rullhjul" name="change_rullhjul"
+                        style="background-color: #af5105;">
+                        Skriv över rullhjul
+                    </button>
+                </div>
+                <div class="div_delete" id="div_delete">
+                    <button type="button" id="delete_rullhjul" name="delete_rullhjul"
+                        style="background-color: #af5105;">
+                        Ta bort rullhjul
+                    </button>
+                </div>
+                <div class="div_new" id="div_new">
+                    <button type="button" id="new_rullhjul" name="new_rullhjul" style="background-color: #af0563;">
+                        Skapa nytt rullhjul
+                    </button>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.1.1.js"
+                    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="public/ajax_rullhjul.js"></script>
+            </center>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var form = document.querySelector('form');
+        form.addEventListener('keyup', function () {
+            $('#div_new').hide();
+            $('#div_overwrite').hide();
+            $('#div_delete').hide();
+            $('#test_rullhjul').trigger('click');
+        });
+
+        $(document).ready(function () {
+            $('#div_new').hide();
+            $('#div_overwrite').hide();
+            $('#div_delete').hide();
+            $('#test_rullhjul').trigger('click');
+        });
+
+        document.getElementById('form').onkeypress = function () {
+            if (event.keyCode === 39) { // apostrophe
+                // prevent the keypress
+                return false;
+            }
+        };
+
+        $(document).ready(function () {
+            $("#delete_rullhjul").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#new_rullhjul").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#change_rullhjul").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

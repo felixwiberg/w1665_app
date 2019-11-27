@@ -1,0 +1,200 @@
+body {
+  margin: none;
+  padding: none;
+  border: none;
+  background-color: #004882;
+  }
+
+.tab {
+  width: auto;
+  margin: none;
+  padding: none;
+  border: none;
+  display: table;
+  border: none;
+}
+
+.row {
+  width: auto;
+  margin: none;
+  padding: none;
+  border: none;
+  display: table-row;
+}
+
+.cell {
+  width: 300px;
+  border: none;
+}
+
+.cell select {
+  background-color: #0563af;
+  color: white;
+  width: 200px;
+  height: 45px;
+  padding: 10px;
+  border: none;
+  font-size: 17px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+
+input[type=submit] {
+  padding:5px 15px; 
+  height:45px;
+  font-size: 17px;
+  background:#ccc; 
+  color: white;
+  border:0 none;
+  cursor:pointer;
+  border-radius: 0px; 
+  transform: translate(0px, -1px);
+}
+
+input[type=submit]:hover {
+  padding:5px 15px; 
+  height:45px;
+  background:#ffffff; 
+  color: black;
+  border:0 none;
+  cursor:pointer;
+  border-radius: 0px; 
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button{
+  padding:5px 15px; 
+  height:45px;
+  font-size: 17px;
+  background:#ccc; 
+  color: white;
+  border:0 none;
+  cursor:pointer;
+  border-radius: 0px; 
+  transform: translate(0px, -1px);
+}
+
+button:hover {
+  padding:5px 15px; 
+  height:45px;
+  background:#ffffff; 
+  color: black;
+  border:0 none;
+  cursor:pointer;
+  border-radius: 0px; 
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+input[type=text] {
+  width: 200px;
+  font-size: 17px;
+  font-family: helvetica;
+}
+
+div {
+  padding: 10px;
+  border: none;
+  margin: 0;
+  font-size: 17px;
+  font-family: helvetica;
+  color: white;
+  line-height: 1.5;
+}
+
+div.sql_hit {
+  justify-content: right;    /* Add this */
+  width: 180px;
+  border: none;
+  margin: 0px;
+  padding: 5px;
+  border: none;
+}
+
+div.div_new {
+  border: none;
+  margin: 10px;
+  padding: 0px;
+  display: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+div.div_delete {
+  border: none;
+  margin: 10px;
+  padding: 0px;
+  display: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+div.div_overwrite {
+  border: none;
+  margin: 10px;
+  padding: 0px;
+  display: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+div.recipe {
+  width: 770px;
+  border: 1px white solid;
+}
+
+div.side{
+  width: 200px;
+  border: 1px solid  white;
+}
+
+div.caption{
+  background-color: #0563af;
+  color: white;
+  width: 200px;
+  height: 45px;
+  padding: 10px;
+  border: none;
+  font-size: 17px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+
+div.grid {
+  border: none;
+  display: flex;
+  justify-content: center;    /* Add this */
+  flex-wrap: wrap;
+}
+
+div.grid_recipe {
+  border: none;
+  padding: 0px;
+  display: flex;
+  justify-content: center;    /* Add this */
+  flex-wrap: wrap;
+}
+
+div.form_name{
+  padding: 5px;
+  margin: 0px;
+  content: 0px;
+  width: 350px;
+  border: none;
+  justify-content: center;    /* Add this */
+}
+
+div.form {
+  padding: 5px;
+  margin: 0px;
+  content: 0px;
+  width: 200px;
+  border: none;
+  justify-content: center;    /* Add this */
+}

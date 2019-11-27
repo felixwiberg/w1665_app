@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <center>
+        <div class=caption>Station: <%= StationId %></div><br>
+    </center>
+    <div class="grid_recipe">
+        <div class="recipe">
+            <form id='form'>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Ancestor</div>
+                    <div class="form"><input type="text" name="designation" value="<%=Designation%>" /></div>
+                    <div class="sql_hit" id="ancestor"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Windchillstatus</div>
+                    <div class="form"></div>
+                    <div class="sql_hit" id="windchill"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Receptnamn</div>
+                    <div class="form"><input type="text" name="recipe_name" id='piss' value="<%=Recipe_Name%>"></div>
+                    <div class="sql_hit" id="recipe_name"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">VA (1/0)</div>
+                    <div class="form"><input type="text" name="VA" value="<%=VA%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Sfärningsvinkel (RH19)</div>
+                    <div class="form"><input type="text" name="SfärningsVinkel_RH19" value="<%=SfärningsVinkel_RH19%>">
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class=" grid_recipe">
+                    <div class="form_name">Återsfäringvinkel Rullstöd (RH20)</div>
+                    <div class="form"><input type="text" name="ÅtersfäringVinkel_Rullstöd_RH20"
+                            value="<%=ÅtersfäringVinkel_Rullstöd_RH20%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Monteringsvinkel (C:IRA50 E:BCA21)</div>
+                    <div class="form"><input type="text" name="MonteringsVinkel_C_eq_IRA50_E_eq_BCA21"
+                            value="<%=MonteringsVinkel_C_eq_IRA50_E_eq_BCA21%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Offset Från Centrum (RH11)</div>
+                    <div class="form"><input type="text" name="OffsetFrånCentrum_RH11"
+                            value="<%=OffsetFrånCentrum_RH11%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Monteringsradie C:(RD75+RSD10)/2 E:RH12</div>
+                    <div class="form"> <input type="text" name="MonteringsRadie_C_eq_RD75_add_RSD10_div_2_E_eq_RH12"
+                            value="<%=MonteringsRadie_C_eq_RD75_add_RSD10_div_2_E_eq_RH12%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Hållare Ytterdiameter (C:CPD10 E:CPD15)</div>
+                    <div class="form"><input type="text" name="Hållare_YtterDiameter_C_eq_CPD10_E_eq_CPD15"
+                            value="<%=Hållare_YtterDiameter_C_eq_CPD10_E_eq_CPD15%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Mothall</div>
+                    <div class="form"><input type="text" name="Mothall_Mothall_ID" value="<%=Mothall_Mothall_ID%>">
+                    </div>
+                    <div class="sql_hit" id="mothall"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rullhjul</div>
+                    <div class="form"><input type="text" name="RullHjul_RullHjul_ID" value="<%=RullHjul_RullHjul_ID%>">
+                    </div>
+                    <div class="sql_hit" id="rullhjul"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rullsarg</div>
+                    <div class="form"><input type="text" name="RullSarg_RullSarg_ID" value="<%=RullSarg_RullSarg_ID%>">
+                    </div>
+                    <div class="sql_hit" id="rullsarg"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Innerringsplatta 1</div>
+                    <div class="form"><input type="text" name="Innerringsplatta1_Innerringsplatta1_ID"
+                            value="<%=Innerringsplatta1_Innerringsplatta1_ID%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Innerringsplatta 2</div>
+                    <div class="form"><input type="text" name="Innerringsplatta2_Innerringsplatta2_ID"
+                            value="<%=Innerringsplatta2_Innerringsplatta2_ID%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rullstöd</div>
+                    <div class="form"><input type="text" name="Rullstöd_Rullstöd_ID" value="<%=Rullstöd_Rullstöd_ID%>">
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Ytterringsstöd </div>
+                    <div class="form"><input type="text" name="Ytterringsstöd_Ytterringsstöd_ID"
+                            value="<%=Ytterringsstöd_Ytterringsstöd_ID%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Robotgripper</div>
+                    <div class="form"><input type="text" name="RobotGripper_Gripper_ID"
+                            value="<%=RobotGripper_Gripper_ID%>"></div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Indexhjul</div>
+                    <div class="form"><input type="text" name="Indexhjul_Indexhjul_ID"
+                            value="<%=Indexhjul_Indexhjul_ID%>"></div>
+                    <div class="sql_hit" id="indexhjul"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Station</div>
+                    <div class="form">
+                        <input type="text" name="StationId" value="<%=StationId%>">
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+            </form>
+        </div>
+
+        <div class=side>
+            <center>
+                <button type="button" id="test_recept" name="test_recept"
+                    style="background-color: #05af51; display: none;">
+                    Testa recept
+                </button>
+                <div class="div_overwrite" id="div_overwrite">
+                    <button type="button" id="change_recept" name="change_recept" style="background-color: #af5105;">
+                        Skriv över recept
+                    </button>
+                </div>
+                <div class="div_delete" id="div_delete">
+                    <button type="button" id="delete_recept" name="delete_recept" style="background-color: #af5105;">
+                        Ta bort recept
+                    </button>
+                </div>
+                <div class="div_new" id="div_new">
+                    <button type="button" id="new_recept" name="new_recept" style="background-color: #af0563;">
+                        Skapa nytt recept
+                    </button>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.1.1.js"
+                    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="public/ajax_recept.js"></script>
+            </center>
+        </div>
+
+        <script type="text/javascript">
+            var form = document.querySelector('form');
+            form.addEventListener('keyup', function () {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+                $('#test_recept').trigger('click');
+            });
+
+            $(document).ready(function () {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+                $('#test_recept').trigger('click');
+            });
+
+            document.getElementById('form').onkeypress = function () {
+                if (event.keyCode === 39) { // apostrophe
+                    // prevent the keypress
+                    return false;
+                }
+            };
+
+            $(document).ready(function () {
+                $("#delete_recept").on("click", function (e) {
+                    $('#div_new').hide();
+                    $('#div_overwrite').hide();
+                    $('#div_delete').hide();
+                });
+            });
+
+            $(document).ready(function () {
+                $("#new_recept").on("click", function (e) {
+                    $('#div_new').hide();
+                    $('#div_overwrite').hide();
+                    $('#div_delete').hide();
+                });
+            });
+
+            $(document).ready(function () {
+                $("#change_recept").on("click", function (e) {
+                    $('#div_new').hide();
+                    $('#div_overwrite').hide();
+                    $('#div_delete').hide();
+                });
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>

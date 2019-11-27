@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <center>
+        <div class=caption>Station: <%= StationId %></div><br>
+    </center>
+
+
+
+    <div class="grid_recipe">
+        <div class="recipe">
+            <form id='form'>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Mothåll_beteckning</div>
+                    <div class="form"><input type="text" name="Mothåll_beteckning" value="<%=Mothåll_beteckning%>" />
+                    </div>
+                    <div class="sql_hit" id="mothall"></div><br>
+                </div>
+                <div class="grid_recipe">
+                    <div class="form_name">Höjd_RH22</div>
+                    <div class="form"><input type="text" name="Höjd_RH22" value="<%=Höjd_RH22%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+                <div class="grid_recipe">
+                    <div class="form_name">Hojd_Offset</div>
+                    <div class="form"><input type="text" name="Hojd_Offset" value="<%=Hojd_Offset%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+                <div class="grid_recipe">
+                    <div class="form_name">Mothåll_StationId</div>
+                    <div class="form"><input type="text" name="Mothåll_StationId" value="<%=Mothåll_StationId%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+            </form>
+        </div>
+
+        <div class=side>
+            <center>
+                <button type="button" id="test_mothall" name="test_mothall"
+                    style="background-color: #05af51; display: none;">
+                    Testa mothåll
+                </button>
+                <div class="div_overwrite" id="div_overwrite">
+                    <button type="button" id="change_mothall" name="change_mothall" style="background-color: #af5105;">
+                        Skriv över mothåll
+                    </button>
+                </div>
+                <div class="div_delete" id="div_delete">
+                    <button type="button" id="delete_mothall" name="delete_mothall" style="background-color: #af5105;">
+                        Ta bort mothåll
+                    </button>
+                </div>
+                <div class="div_new" id="div_new">
+                    <button type="button" id="new_mothall" name="new_mothall" style="background-color: #af0563;">
+                        Skapa nytt mothåll
+                    </button>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.1.1.js"
+                    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="public/ajax_mothall.js"></script>
+            </center>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var form = document.querySelector('form');
+        form.addEventListener('keyup', function () {
+            $('#div_new').hide();
+            $('#div_overwrite').hide();
+            $('#div_delete').hide();
+            $('#test_mothall').trigger('click');
+        });
+
+        $(document).ready(function () {
+            $('#div_new').hide();
+            $('#div_overwrite').hide();
+            $('#div_delete').hide();
+            $('#test_mothall').trigger('click');
+        });
+
+        document.getElementById('form').onkeypress = function () {
+            if (event.keyCode === 39) { // apostrophe
+                // prevent the keypress
+                return false;
+            }
+        };
+
+        $(document).ready(function () {
+            $("#delete_mothall").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#new_mothall").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#change_mothall").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

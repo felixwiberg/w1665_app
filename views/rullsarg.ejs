@@ -1,0 +1,153 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <center>
+        <div class=caption>Station: <%= StationId %></div><br>
+    </center>
+
+    <div class="grid_recipe">
+        <div class="recipe">
+            <form id='form'>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rullsarg beteckning</div>
+                    <div class="form"><input type="text" name="Rullsarg_beteckning" value="<%=Rullsarg_beteckning%>" />
+                    </div>
+                    <div class="sql_hit" id="rullsarg"></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">E-lager</div>
+                    <div class="form"><input type="text" name="E_lager" value="<%=E_lager%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rulle_Höjd_Midja_RH21</div>
+                    <div class="form"><input type="text" name="Rulle_Höjd_Midja_RH21"
+                            value="<%=Rulle_Höjd_Midja_RH21%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rulltryckare_Radie_RH13</div>
+                    <div class="form"><input type="text" name="Rulltryckare_Radie_RH13"
+                            value="<%=Rulltryckare_Radie_RH13%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rulltryckare_OffsetFrånCentrum_RH15</div>
+                    <div class="form"><input type="text" name="Rulltryckare_OffsetFrånCentrum_RH15"
+                            value="<%=Rulltryckare_OffsetFrånCentrum_RH15%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Laddningsvinkel_RH14</div>
+                    <div class="form"><input type="text" name="Laddningsvinkel_RH14"
+                            value="<%=Laddningsvinkel_RH14%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+
+                <div class="grid_recipe">
+                    <div class="form_name">Rullsarg_StationId</div>
+                    <div class="form"><input type="text" name="Rullsarg_StationId" value="<%=Rullsarg_StationId%>" />
+                    </div>
+                    <div class="sql_hit" id=""></div><br>
+                </div>
+            </form>
+        </div>
+
+        <div class=side>
+            <center>
+                <button type="button" id="test_rullsarg" name="test_rullsarg"
+                    style="background-color: #05af51; display: none;">
+                    Testa rullsarg
+                </button>
+                <div class="div_overwrite" id="div_overwrite">
+                    <button type="button" id="change_rullsarg" name="change_rullsarg"
+                        style="background-color: #af5105;">
+                        Skriv över rullsarg
+                    </button>
+                </div>
+                <div class="div_delete" id="div_delete">
+                    <button type="button" id="delete_rullsarg" name="delete_rullsarg"
+                        style="background-color: #af5105;">
+                        Ta bort rullsarg
+                    </button>
+                </div>
+                <div class="div_new" id="div_new">
+                    <button type="button" id="new_rullsarg" name="new_rullsarg" style="background-color: #af0563;">
+                        Skapa nytt rullsarg
+                    </button>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.1.1.js"
+                    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+                <script type="text/javascript" src="public/ajax_rullsarg.js"></script>
+            </center>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var form = document.querySelector('form');
+        form.addEventListener('keyup', function () {
+            $('#div_new').hide();
+            $('#div_overwrite').hide();
+            $('#div_delete').hide();
+            $('#test_rullsarg').trigger('click');
+        });
+
+        $(document).ready(function () {
+            $('#div_new').hide();
+            $('#div_overwrite').hide();
+            $('#div_delete').hide();
+            $('#test_rullsarg').trigger('click');
+        });
+
+        document.getElementById('form').onkeypress = function () {
+            if (event.keyCode === 39) { // apostrophe
+                // prevent the keypress
+                return false;
+            }
+        };
+
+        $(document).ready(function () {
+            $("#delete_rullsarg").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#new_rullsarg").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("#change_rullsarg").on("click", function (e) {
+                $('#div_new').hide();
+                $('#div_overwrite').hide();
+                $('#div_delete').hide();
+            });
+        });
+    </script>
+</body>
+
+</html>

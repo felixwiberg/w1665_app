@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body>
+    <center>
+
+        <div class=caption>Station: <%= StationId %>
+        </div><br>
+
+        <div class="cell">
+            <div class=caption style="background-color: #a905af;">Recept</div>
+            <form action="/recept" method="post">
+                <select name="recept" id="recept">
+                    <% for(var i=0; i < dropdownVals_recept.length; i++) { %>
+                    <option value="<%= dropdownVals_recept[i] %>"><%= dropdownVals_recept[i] %></option>
+                    <% } %>
+                </select>
+                <input type='submit' id='query' name='button' value='Välj' />
+            </form>
+        </div>
+
+        <div class="grid">
+            <div class="cell">
+                <div class=caption>Rullsarg</div>
+                <form action="/rullsarg" method="post">
+                    <select name="rullsarg" id="rullsarg">
+                        <% for(var i=0; i < dropdownVals_rullsarg.length; i++) { %>
+                        <option value="<%= dropdownVals_rullsarg[i] %>"><%= dropdownVals_rullsarg[i] %></option>
+                        <% } %>
+                    </select>
+                    <input type='submit' id='query' name='button' value='Välj' />
+                </form>
+            </div>
+
+            <div class="cell">
+                <div class=caption>Rullhjul</div>
+                <form action="/rullhjul" method="post">
+                    <select name="rullhjul" id="rullhjul">
+                        <% for(var i=0; i < dropdownVals_rullhjul.length; i++) { %>
+                        <option value="<%= dropdownVals_rullhjul[i] %>"><%= dropdownVals_rullhjul[i] %></option>
+                        <% } %>
+                    </select>
+                    <input type='submit' id='query' name='button' value='Välj' />
+                </form>
+            </div>
+
+            <div class="cell">
+                <div class=caption>Indexhjul</div>
+                <form action="/indexhjul" method="post">
+                    <select name="indexhjul" id="indexhjul">
+                        <% for(var i=0; i < dropdownVals_indexhjul.length; i++) { %>
+                        <option value="<%= dropdownVals_indexhjul[i] %>"><%= dropdownVals_indexhjul[i] %></option>
+                        <% } %>
+                    </select>
+                    <input type='submit' id='query' name='button' value='Välj' />
+                </form>
+            </div>
+
+            <div class="cell">
+                <div class=caption>Mothåll</div>
+                <form action="/mothall" method="post">
+                    <select name="mothall" id="mothall">
+                        <% for(var i=0; i < dropdownVals_mothall.length; i++) { %>
+                        <option value="<%= dropdownVals_mothall[i] %>"><%= dropdownVals_mothall[i] %></option>
+                        <% } %>
+                    </select>
+                    <input type='submit' id='query' name='button' value='Välj' />
+                </form>
+            </div>
+        </div>
+    </center>
+
+</body>
+
+</html>
